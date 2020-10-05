@@ -1,9 +1,5 @@
 from vapoursynth import core, GRAY, YUV, YUV444P8
 
-import sys
-
-sys.path.append(".")
-
 import muvsfunc
 
 
@@ -176,6 +172,7 @@ def iip(clp, dest_x=None, dest_y=None, duststr=2, dustweight=1.0, ss1_x=1.414, s
     #
     if dering < 0:
         edge1b = YV12SubtractTol1WiderangeTrue(clip1=last, clip2=Xsharpen(clip=last, strength=256, threshold=255))
+        # Here it multiplies by dering_floor, but in the old routine it subtracts dering_floor and multiplies by dering_bias. Is it a mistake? -- dubhater
         edge1b = edge1b.std.Expr(expr=f"x 128 - abs {dering_floor} *").std.Maximum().std.Inflate().std.Maximum().std.Inflate()
         edge1b = FineEdge(clp=edge1b, div=dering_bias)
         edge1b = muvsfunc.Blur(clip=edge1b, amountH=1.58)
