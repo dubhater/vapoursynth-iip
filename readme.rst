@@ -188,11 +188,11 @@ Parameters:
 Requirements
 ============
 
-   * `muvsfunc          <https://github.com/WolframRhodium/muvsfunc>`_
-   * `AWarpSharp2       <https://github.com/dubhater/vapoursynth-awarpsharp2>`_
-   * `MVTools           <https://github.com/dubhater/vapoursynth-mvtools>`_
-   * RemoveGrain (included with VapourSynth)
-   * `TemporalSoften2   <https://github.com/dubhater/vapoursynth-temporalsoften2>`_
+* `muvsfunc          <https://github.com/WolframRhodium/muvsfunc>`_
+* `AWarpSharp2       <https://github.com/dubhater/vapoursynth-awarpsharp2>`_
+* `MVTools           <https://github.com/dubhater/vapoursynth-mvtools>`_
+* RemoveGrain (included with VapourSynth)
+* `TemporalSoften2   <https://github.com/dubhater/vapoursynth-temporalsoften2>`_
 
 
 License
